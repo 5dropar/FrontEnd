@@ -1,4 +1,16 @@
-body {
-    background-color: red;
 
+body {
+position: relative;
+min-height: 100vh;
+margin: 0;
+padding: 0;
+}
+footer{
+    width: 100vw;
+    bottom: 0;
+    position: absolute;
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
 }
