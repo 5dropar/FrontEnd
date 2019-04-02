@@ -13,10 +13,16 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="d-flex justify-content-between align-items-center">
+        <h3>TID</h3>
           <ul class="nav justify-content-end">
               <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                <div id="search-container">
+                    <a class="nav-link" href="#">
+                      <input id="search" type="text">
+                      <i class="fas fa-search"></i>
+                    </a>
+                </div>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
@@ -24,7 +30,6 @@
             </ul>
       </nav>
     </header>
-    <input id="search" type="text">
     <button id="highest">Highest rating</button>
     <button id="lowest">Lowest rating</button>
 
