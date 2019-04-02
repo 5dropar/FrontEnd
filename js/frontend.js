@@ -3,37 +3,34 @@ const sortHighest = document.getElementById("highest")
 const sortLowest = document.getElementById("lowest")
 const search = document.getElementById("search")
 let newCardImages;
+let cardImages;
 
-const cardImages = [
-    {
-        title: "titill",
-        imgUrl: "https://content1.jdmagicbox.com/comp/agra/i9/0562px562.x562.140606173444.v1i9/catalogue/nice-studio-mg-road-agar-agra-photo-studios-25q7xbvb33.jpg",
-        rating: 5,
-        description: "Llorem ipsum Llorem ipsumLlorem ipsumLlorem ipsum"
-    },
-    {
-        title: "titill2",
-        imgUrl: "https://content1.jdmagicbox.com/comp/agra/i9/0562px562.x562.140606173444.v1i9/catalogue/nice-studio-mg-road-agar-agra-photo-studios-25q7xbvb33.jpg",
-        rating: 8,
-        description: "sjomli sjomli sjomli sjomli sjomli"
-    },
-    {
-        title: "titill2",
-        imgUrl: "https://content1.jdmagicbox.com/comp/agra/i9/0562px562.x562.140606173444.v1i9/catalogue/nice-studio-mg-road-agar-agra-photo-studios-25q7xbvb33.jpg",
-        rating: 9,
-        description: "sjomli sjomli sjomli sjomli sjomli"
-    },{
-        title: "titill2",
-        imgUrl: "https://content1.jdmagicbox.com/comp/agra/i9/0562px562.x562.140606173444.v1i9/catalogue/nice-studio-mg-road-agar-agra-photo-studios-25q7xbvb33.jpg",
-        rating: 4,
-        description: "sjomli sjomli sjomli sjomli sjomli"
-    },{
-        title: "titill2",
-        imgUrl: "https://content1.jdmagicbox.com/comp/agra/i9/0562px562.x562.140606173444.v1i9/catalogue/nice-studio-mg-road-agar-agra-photo-studios-25q7xbvb33.jpg",
-        rating: 3,
-        description: "sjomli sjomli sjomli sjomli sjomli"
-    }
-]
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyByIb4TWrs3WcDKgr_aMgyCFVVaPq26iRc",
+    authDomain: "dropar-e12fb.firebaseapp.com",
+    databaseURL: "https://dropar-e12fb.firebaseio.com",
+    projectId: "dropar-e12fb",
+    storageBucket: "dropar-e12fb.appspot.com",
+    messagingSenderId: "983460445073"
+};
+firebase.initializeApp(config);
+const db = firebase.firestore();
+
+db.collection("images").get().then(function (querySnapshot) {
+    cardImages = getJson(querySnapshot)
+    displayImages(cardImages)
+});
+getJson = (array) => {
+    let returnJson = [];
+    array.forEach(function(doc){
+        const data = doc.data();
+        returnJson.push(data);
+    })
+    return returnJson;
+}
+
 displayImages = (array)=>{
     imageContainer.innerHTML = ""
     array.forEach(image=>{
@@ -49,7 +46,6 @@ buildImage = (image)=>{
     </div>
     `
 }
-displayImages(cardImages)
 
 // Sorting
 sortHighest.onclick = ()=>{
@@ -99,3 +95,9 @@ search.onkeyup = () =>{
     displayImages(newCardImages)
     console.log(string)
 }
+
+
+
+
+
+
