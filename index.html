@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300i,400,600" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -15,11 +16,11 @@
     <header>
       <nav class="d-flex justify-content-between align-items-center">
         <h3>TID</h3>
-          <ul class="nav justify-content-end">
-              <li class="nav-item">
+          <ul class="nav justify-content-end ">
+              <li class="nav-item ">
                 <div id="search-container">
-                    <a class="nav-link" href="#">
-                      <input id="search" type="text">
+                    <a class="nav-link align-items-center" href="#">
+                      <input id="search" type="text" placeholder="search..">
                       <i class="fas fa-search"></i>
                     </a>
                 </div>
@@ -30,8 +31,12 @@
             </ul>
       </nav>
     </header>
-    <button id="highest">Highest rating</button>
-    <button id="lowest">Lowest rating</button>
+    <div id="btn-container">
+      <div id="btns">
+        <button id="highest">Highest rating</button>
+        <button id="lowest">Lowest rating</button>
+      </div>
+  </div>
 
     <div class="container">
       <div class="row">
