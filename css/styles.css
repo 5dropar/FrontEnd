@@ -26,7 +26,7 @@ header nav #search-container {
   justify-content: flex-start;
   border-radius: 5px;
 }
-header nav #search-container #search {
+header nav #search-container #searchbar {
   border: none;
   outline: none;
   padding: 0;

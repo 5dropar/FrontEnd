@@ -1,7 +1,7 @@
 const imageContainer = document.getElementById("image-container");
 const sortHighest = document.getElementById("highest");
 const sortLowest = document.getElementById("lowest");
-const search = document.getElementById("search");
+const searchbar = document.getElementById("searchbar");
 let newCardImages;
 let cardImages; // card images global þannig hægt er að vinna með það hvar sem er.
 
@@ -85,8 +85,8 @@ sortLowest.onclick = () => {
 // Search
 
 //function sem keryrir í hver einasta skipti sem ýtt er á takka á lylklaborðinu inní search textbox inputinum.
-search.onkeyup = () => {
-  let string = search.value.toString(); // Strengur sem hefur alltaf sama gildi og það sem er verið að skrifa.
+searchbar.onkeyup = () => {
+  let string = searchbar.value.toString(); // Strengur sem hefur alltaf sama gildi og það sem er verið að skrifa.
   newCardImages = cardImages.filter(currentImage => {
     return currentImage.description.includes(string); // Returna bara images þar sem að image.description matchar strengum sem er verið að skrifa
   });
