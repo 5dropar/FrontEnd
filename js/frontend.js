@@ -46,7 +46,7 @@ displayImages = array => {
 buildImage = image => {
     return `
         <div id="card">
-            <img src="${image.imgageUrl}">
+            <img src="${image.imgUrl}">
             <div class="card-text">
                 <h3>${image.title}</h3>
                 <p>${image.description}</p>
