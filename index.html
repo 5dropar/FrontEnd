@@ -14,22 +14,24 @@
   </head>
   <body>
     <header>
-      <nav class="d-flex justify-content-between align-items-center">
-        <h3>TID</h3>
-          <ul class="nav justify-content-end ">
-              <li class="nav-item ">
-                <div id="search-container">
-                    <a class="nav-link align-items-center" href="#">
-                      <input id="searchbar" type="text" placeholder="search..">
-                      <i class="fas fa-search"></i>
-                    </a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
-              </li>
-            </ul>
-      </nav>
+      <div id="header-container">
+        <nav class="d-flex justify-content-between ">
+          <h4>TheImgDatabase</h4>
+            <ul class="nav justify-content-end ">
+                <li class="nav-item ">
+                  <div id="search-container">
+                      <a class="nav-link align-items-center" href="#">
+                        <input id="searchbar" type="text" placeholder="search..">
+                        <i class="fas fa-search"></i>
+                      </a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
+                </li>
+              </ul>
+        </nav>
+      </div>
     </header>
     <div id="btn-container">
       <div id="btns">
@@ -74,15 +76,31 @@
       </div>
     </div>
   </div>
-    <footer>
-      <div class="footer-container bg-primary text-white" >
+    <footer class="bg-primary">
+      <div class="footer-container text-white" >
         <div class="footer-info">
           <h2>Contact</h2>
         </div>
         <div class="footer-contact-info">
-          <div class="footer-phone"><h3>565 3720</h3></div>
-          <div class="footer-email"><h3><a href = "mailto: tid@tid.com">Send Email</a></h3></div>
-          <div class="footer-address"><h3>Longroad 543, London</h3></div>
+          <div class="footer-phone">
+            <div class="footer-icon">
+                <i class="fas fa-phone"></i>
+            </div>
+            <h4>565 3720</h4>
+          </div>
+          <div class="footer-address">
+              <div class="footer-icon">
+                <i class="fas fa-home"></i>
+              </div>
+              <h4>Longroad 543, London</h4>
+          </div>
+          <div class="footer-email">
+            <div class="footer-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h4><a href = "mailto: tid@tid.com">tid@tid.com</a></h4>
+          </div>
+          
         </div>
       </div>
     </footer>
