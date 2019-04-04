@@ -33,11 +33,12 @@ showModal = image => {
   const modalBody = document.querySelector(".modal-body");
   modalBody.innerHTML = `
     <div class="content-holder">
+        <img class="modal-img" src="${image.imgUrl}">
 
-        <h5 class=""modal-heading>Description:</Heading>
+        <h5 class="modal-heading">Description:</Heading>
         <p class="modal-description">${checkDescription(image)}</p>
 
-        <h5 class=""modal-heading>Tags: </Heading>
+        <h5 class="modal-heading">Tags: </Heading>
         <p class="modal-tags">${getModalTags(image)}</p>
     </div>
   `;
