@@ -46,12 +46,17 @@ displayImages = array => {
 
 //Build imge tekur inn eitt object í einu og returnar card-i með upplýsingum úr þeim object
 buildImage = image => {
+
+  let time = new Date(image.date.seconds)
+  
   return `
         <div id="card">
             <img class="card-image" src="${image.imgUrl}">
             <div class="card-text">
-                <h3>${image.title}</h3>
-                <p>${image.description}</p>
+            <h3>${image.title}</h3>
+            <p> Description: ${image.description}</p>
+            <p>Rating = ${image.rating}</p>
+            <p>${time}</p>
                 <button onclick="getImage('${
                   image.imageId
                 }')" class="enable-modal" id="morebtn" data-toggle="modal" data-target="#modal">Read more</i></button>
