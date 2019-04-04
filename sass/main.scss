@@ -69,7 +69,10 @@ header nav ul {
   width: 700px;
   display: flex;
   justify-content: space-between;
-  #highest, #lowest, #newest, #oldest {
+  #highest,
+  #lowest,
+  #newest,
+  #oldest {
     background-color: $primary-color;
     color: $white;
     height: 40px;
@@ -78,7 +81,10 @@ header nav ul {
     border: none;
     border-radius: 5px;
   }
-  #highest:hover, #lowest:hover, #newest:hover, #oldest:hover {
+  #highest:hover,
+  #lowest:hover,
+  #newest:hover,
+  #oldest:hover {
     background-color: $hover-color;
     color: $white;
     height: 40px;
@@ -158,9 +164,8 @@ footer {
   justify-content: center;
 }
 #card {
-  //   height: 300px;
   width: 400px;
-  height: 480px;
+
   box-shadow: 1px 1px 15px #d1d1d1;
   margin: 20px;
   border-radius: 5px;
