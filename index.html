@@ -1,15 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300i,400,600" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300i,400,600"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>The Image Database</title>
   </head>
   <body>
@@ -17,19 +33,19 @@
       <div id="header-container">
         <nav class="d-flex justify-content-between ">
           <h4>TheImgDatabase</h4>
-            <ul class="nav justify-content-end ">
-                <li class="nav-item ">
-                  <div id="search-container">
-                      <a class="nav-link align-items-center" href="#">
-                        <input id="searchbar" type="text" placeholder="search..">
-                        <i class="fas fa-search"></i>
-                      </a>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
-                </li>
-              </ul>
+          <ul class="nav justify-content-end ">
+            <li class="nav-item ">
+              <div id="search-container">
+                <a class="nav-link align-items-center" href="#">
+                  <input id="searchbar" type="text" placeholder="search.." />
+                  <i class="fas fa-search"></i>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
@@ -40,13 +56,11 @@
         <button id="newest">Newest</button>
         <button id="oldest">Oldest</button>
       </div>
-  </div>
+    </div>
 
     <div class="container">
       <div class="row">
-        <div id="image-container">
-
-        </div>
+        <div id="image-container"></div>
         <!-- <div class="col-lg-4 col-md-12 mx-auto">
             <div class="card" style="width: 18rem;">
               <img src="..." class="card-img-top" alt="...">
@@ -60,49 +74,60 @@
       </div>
     </div>
     <!-- Modal-->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <!-- <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button> -->
+    <div
+      class="modal fade"
+      id="modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">
+              Image Info
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <!-- <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button> -->
+          </div>
         </div>
       </div>
     </div>
-  </div>
     <footer class="bg-primary">
-      <div class="footer-container text-white" >
+      <div class="footer-container text-white">
         <div class="footer-info">
           <h2>Contact</h2>
         </div>
         <div class="footer-contact-info">
           <div class="footer-phone">
             <div class="footer-icon">
-                <i class="fas fa-phone"></i>
+              <i class="fas fa-phone"></i>
             </div>
             <h4>565 3720</h4>
           </div>
           <div class="footer-address">
-              <div class="footer-icon">
-                <i class="fas fa-home"></i>
-              </div>
-              <h4>Longroad 543, London</h4>
+            <div class="footer-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <h4>Longroad 543, London</h4>
           </div>
           <div class="footer-email">
             <div class="footer-icon">
               <i class="fas fa-envelope"></i>
             </div>
-            <h4><a href = "mailto: tid@tid.com">tid@tid.com</a></h4>
+            <h4><a href="mailto: tid@tid.com">tid@tid.com</a></h4>
           </div>
-          
         </div>
       </div>
     </footer>
@@ -111,10 +136,22 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/frontend.js"></script>
-    
+    <script src="js/frontend2.js"></script>
   </body>
 </html>

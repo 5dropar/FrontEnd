@@ -52,7 +52,9 @@ buildImage = image => {
             <div class="card-text">
                 <h3>${image.title}</h3>
                 <p>${image.description}</p>
-                <button id="morebtn">Read more</i></button>
+                <button onclick="getImage('${
+                  image.imageId
+                }')" class="enable-modal" id="morebtn" data-toggle="modal" data-target="#modal">Read more</i></button>
             </div>
         </div>
     `;
