@@ -91,9 +91,19 @@ sortLowest.onclick = () => {
 
 //function sem keryrir í hver einasta skipti sem ýtt er á takka á lylklaborðinu inní search textbox inputinum.
 searchbar.onkeyup = () => {
-  let string = searchbar.value.toString(); // Strengur sem hefur alltaf sama gildi og það sem er verið að skrifa.
+  let string = searchbar.value.toString(); // Strengur sem hefur alltaf sama gildi og það sem er verið að skrifa.  
   newCardImages = cardImages.filter(currentImage => {
-    return currentImage.description.includes(string); // Returna bara images þar sem að image.description matchar strengum sem er verið að skrifa
+    var newString = string.toLowerCase() // breytir string í lowercase
+    var newDescription = currentImage.description.toLowerCase() // breytir description í lowercase
+    var newTitle = currentImage.title.toLowerCase() //breytir title í lowercase
+
+    var matchesDescription = newDescription.includes(newString) // ef að description matchar við searchið kemur niðurstaða
+    var matchesTitle = newTitle.includes(newString) // ef að title matchar við searchið kemur niðustaða
+    
+    var result = matchesDescription || matchesTitle // resultið getur verið úr description EÐA title  || = or  semsagt description or title
+
+    return result;// Returnar cards þar sem description eða title matcha leitinni
   });
+  
   displayImages(newCardImages); // Kallað í displayImages með nýja arrayinu. Það mun síðan hreinsa innerhtml-ið á iamgecontainer og loopa í gegnum og birta þetta í staðinn.
 };
