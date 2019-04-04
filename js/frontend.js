@@ -46,8 +46,24 @@ displayImages = array => {
 
 //Build imge tekur inn eitt object í einu og returnar card-i með upplýsingum úr þeim object
 buildImage = image => {
+  dateTime = () => {
+    function pad(value) { 
+      if (value < 10) { 
+        return '0' + value; 
+      } 
+      else 
+      { 
+          return value; 
+      }
+    } //pad bætir 0 framan við mínútur, svo það verður td. 20:00 en ekki 20:0, fann á stack overflow
 
-  let time = new Date(image.date.seconds)
+    let time = new Date(image.date.seconds*1000);
+    return `
+     <p>${pad(time.getDate())}.${pad(time.getMonth()+1)} ${ time.getFullYear()}</p> 
+     <p>at</p><p>${pad(time.getHours())}:${pad(time.getMinutes())}:${pad(time.getSeconds())}</p>
+     `
+
+  }
   
   return `
         <div id="card">
@@ -56,8 +72,8 @@ buildImage = image => {
             <h3>${image.title}</h3>
             <p> Description: ${image.description}</p>
             <p>Rating = ${image.rating}</p>
-            <p>${time}</p>
-                <button onclick="getImage('${
+            <p>Publihed ${dateTime()}</p>
+            <button onclick="getImage('${
                   image.imageId
                 }')" class="enable-modal" id="morebtn" data-toggle="modal" data-target="#modal">Read more</i></button>
             </div>
