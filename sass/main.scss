@@ -65,10 +65,10 @@ header nav ul {
   justify-content: flex-end;
 }
 #btns {
-  width: 350px;
+  width: 700px;
   display: flex;
   justify-content: space-between;
-  #highest {
+  #highest, #lowest, #newest, #oldest {
     background-color: $primary-color;
     color: $white;
     height: 40px;
@@ -77,26 +77,7 @@ header nav ul {
     border: none;
     border-radius: 5px;
   }
-  #highest:hover {
-    background-color: $hover-color;
-    color: $white;
-    height: 40px;
-    width: 160px;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    transition: 0.3s;
-  }
-  #lowest {
-    background-color: $primary-color;
-    color: $white;
-    height: 40px;
-    width: 160px;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-  }
-  #lowest:hover {
+  #highest:hover, #lowest:hover, #newest:hover, #oldest:hover {
     background-color: $hover-color;
     color: $white;
     height: 40px;
