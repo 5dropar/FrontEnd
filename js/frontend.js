@@ -46,6 +46,8 @@ displayImages = array => {
 
 //Build imge tekur inn eitt object í einu og returnar card-i með upplýsingum úr þeim object
 buildImage = image => {
+
+  
   return `
         <div id="card">
             <img class="card-image" src="${image.imgUrl}">
