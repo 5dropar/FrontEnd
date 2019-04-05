@@ -117,33 +117,37 @@ sortLowest.onclick = () => {
   }
 };
 sortNewest.onclick = () => {
-  if (cardImages) {
+  if (newCardImages) {
+    newCardImages.sort((a, b) => {
+      const timeA = a.date.seconds;
+      const timeB = b.date.seconds;
+      return timeB - timeA;
+    });
+    displayImages(newCardImages);
+  } else {
     cardImages.sort((a, b) => {
       const timeA = a.date.seconds;
       const timeB = b.date.seconds;
       return timeB - timeA;
     });
     displayImages(cardImages);
-  } else {
-    newCardImages.sort((a, b) => {
-      return a.timeAsec - b.timeBsec;
-    });
-    displayImages(newCardImages);
   }
 };
 sortOldest.onclick = () => {
-  if (cardImages) {
+  if (newCardImages) {
+    newCardImages.sort((a, b) => {
+      const timeA = a.date.seconds;
+      const timeB = b.date.seconds;
+      return timeA - timeB;
+    });
+    displayImages(newCardImages);
+  } else {
     cardImages.sort((a, b) => {
       const timeA = a.date.seconds;
       const timeB = b.date.seconds;
       return timeA - timeB;
     });
     displayImages(cardImages);
-  } else {
-    newCardImages.sort((a, b) => {
-      return b.timeAsec - a.timeBsec;
-    });
-    displayImages(newCardImages);
   }
 };
 
