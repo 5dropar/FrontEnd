@@ -238,4 +238,10 @@ footer a {
   padding: 10px;
 }
 
+@media (max-width: 1000px) {
+  #image-container {
+    justify-content: center !important;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
