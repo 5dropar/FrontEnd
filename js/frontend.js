@@ -167,3 +167,22 @@ searchbar.onkeyup = () => {
 
   displayImages(newCardImages); // Kallað í displayImages með nýja arrayinu. Það mun síðan hreinsa innerhtml-ið á iamgecontainer og loopa í gegnum og birta þetta í staðinn.
 };
+
+// Button active state
+const btns = document.querySelectorAll('button');
+let btnAct = document.createElement('div');
+
+const sortBtn = (click, active) => {
+  active.classList.toggle('active');
+  click.classList.toggle('active');
+  btnAct = click;
+}
+
+for ( let i = 0; i < btns.length; i++ ) {
+  const btn = btns[i];
+
+  btn.addEventListener('click', function() {
+    sortBtn(this, btnAct);
+  });
+}
+
