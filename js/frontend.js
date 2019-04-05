@@ -72,7 +72,7 @@ buildImage = image => {
             <h3>${image.title}</h3>
             <p> Description: ${image.description}</p>
             <p>Rating = ${image.rating}</p>
-            <p>Publihed ${dateTime()}</p>
+            <p>Date ${dateTime()}</p>
             <button onclick="getImage('${
                   image.imageId
                 }')" class="enable-modal" id="morebtn" data-toggle="modal" data-target="#modal">Read more</i></button>

@@ -165,11 +165,15 @@ footer {
 }
 #card {
   width: 400px;
-
   box-shadow: 1px 1px 15px #d1d1d1;
   margin: 20px;
   border-radius: 5px;
+  // .card-image{
 
+  // }
+  .card-text{
+    padding: 20px;
+  }
   #morebtn {
     background-color: $primary-color;
     color: $white;
