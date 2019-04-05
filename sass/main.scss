@@ -33,7 +33,14 @@ header nav {
     padding-top: 0;
     padding-bottom: 0;
   }
-
+  a:hover{
+    text-decoration: none;
+    border: none;
+    h4{
+      text-decoration: none;
+      border: none;
+    }
+  }
   #search-container {
     border: 1px solid $primary-color;
     background-color: $white;
@@ -221,7 +228,6 @@ footer {
     border: none;
     border-radius: 5px;
     transition: 0.3s;
-    animation: bounce 1s;
   }
   img {
     width: 100%;
