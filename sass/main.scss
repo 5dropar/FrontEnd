@@ -49,6 +49,7 @@ header nav {
     }
   }
 }
+
 nav h4 {
   color: $primary-color;
 }
@@ -174,6 +175,13 @@ footer {
   .card-text{
     padding: 20px;
   }
+  .card-date{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 220px;
+  }
+  
   #morebtn {
     background-color: $primary-color;
     color: $white;
@@ -233,4 +241,5 @@ footer {
 .modal-body {
   padding: 0;
   margin: 0;
+  padding: 10px;
 }

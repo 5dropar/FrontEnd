@@ -173,6 +173,12 @@ footer a {
 #card .card-text {
   padding: 20px;
 }
+#card .card-date {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 220px;
+}
 #card #morebtn {
   background-color: #007bff;
   color: #fff;
@@ -227,6 +233,7 @@ footer a {
 .modal-body {
   padding: 0;
   margin: 0;
+  padding: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -59,8 +59,12 @@ buildImage = image => {
 
     let time = new Date(image.date.seconds*1000);
     return `
-     <p>${pad(time.getDate())}.${pad(time.getMonth()+1)} ${ time.getFullYear()}</p> 
-     <p>at</p><p>${pad(time.getHours())}:${pad(time.getMinutes())}:${pad(time.getSeconds())}</p>
+      <div class="card-date">
+        <p>Date:</p>
+        <p>${pad(time.getDate())}.${pad(time.getMonth()+1)} ${ time.getFullYear()}</p> 
+        <p>at</p>
+        <p>${pad(time.getHours())}:${pad(time.getMinutes())}:${pad(time.getSeconds())}</p>
+      </div>
      `
 
   }
@@ -71,8 +75,8 @@ buildImage = image => {
             <div class="card-text">
             <h3>${image.title}</h3>
             <p> Description: ${image.description}</p>
-            <p>Rating = ${image.rating}</p>
-            <p>Date ${dateTime()}</p>
+            <p>Rating: ${image.rating}</p>
+            <p>${dateTime()}</p>
             <button onclick="getImage('${
                   image.imageId
                 }')" class="enable-modal" id="morebtn" data-toggle="modal" data-target="#modal">Read more</i></button>
