@@ -78,7 +78,7 @@ header nav ul {
     outline: none;
     border: none;
     border-radius: 5px;
-  
+
     &:hover,
     &:focus,
     &.active {
@@ -169,16 +169,16 @@ footer {
   // .card-image{
 
   // }
-  .card-text{
+  .card-text {
     padding: 20px;
   }
-  .card-date{
+  .card-date {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 220px;
   }
-  
+
   #morebtn {
     background-color: $primary-color;
     color: $white;
@@ -239,4 +239,9 @@ footer {
   padding: 0;
   margin: 0;
   padding: 10px;
+}
+@media (max-width: 1000px) {
+  #image-container {
+    justify-content: center !important;
+  }
 }
