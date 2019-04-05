@@ -42,6 +42,7 @@ displayImages = array => {
     // fyrir hverja einustu mynd
     imageContainer.innerHTML += buildImage(image); // Kallað í buildImage function með núverandi image sem parameter sem að returnar div með myndinni og það sett í innerhtml á iamgecontater sem birtir allar myndir
   });
+  // imageContainer.innerHTML += "<div></div> <div></div> <div></div>"
 };
 
 //Build imge tekur inn eitt object í einu og returnar card-i með upplýsingum úr þeim object
