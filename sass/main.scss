@@ -159,10 +159,12 @@ footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
 }
 #card {
-  width: 400px;
+  width: 30%;
   box-shadow: 1px 1px 15px #d1d1d1;
   margin: 20px;
   border-radius: 5px;
@@ -240,8 +242,16 @@ footer {
   margin: 0;
   padding: 10px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1600px) {
+  #card {
+    width: 45% !important;
+  }
+}
+@media (max-width: 1050px) {
   #image-container {
     justify-content: center !important;
+  }
+  #card {
+    width: 100% !important;
   }
 }
