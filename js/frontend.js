@@ -118,33 +118,37 @@ sortLowest.onclick = () => {
   }
 };
 sortNewest.onclick = () => {
-  if (cardImages) {
+  if (newCardImages) {
+    newCardImages.sort((a, b) => {
+      const timeA = a.date.seconds;
+      const timeB = b.date.seconds;
+      return timeB - timeA;
+    });
+    displayImages(newCardImages);
+  } else {
     cardImages.sort((a, b) => {
       const timeA = a.date.seconds;
       const timeB = b.date.seconds;
       return timeB - timeA;
     });
     displayImages(cardImages);
-  } else {
-    newCardImages.sort((a, b) => {
-      return a.timeAsec - b.timeBsec;
-    });
-    displayImages(newCardImages);
   }
 };
 sortOldest.onclick = () => {
-  if (cardImages) {
+  if (newCardImages) {
+    newCardImages.sort((a, b) => {
+      const timeA = a.date.seconds;
+      const timeB = b.date.seconds;
+      return timeA - timeB;
+    });
+    displayImages(newCardImages);
+  } else {
     cardImages.sort((a, b) => {
       const timeA = a.date.seconds;
       const timeB = b.date.seconds;
       return timeA - timeB;
     });
     displayImages(cardImages);
-  } else {
-    newCardImages.sort((a, b) => {
-      return b.timeAsec - a.timeBsec;
-    });
-    displayImages(newCardImages);
   }
 };
 
@@ -168,3 +172,22 @@ searchbar.onkeyup = () => {
 
   displayImages(newCardImages); // Kallað í displayImages með nýja arrayinu. Það mun síðan hreinsa innerhtml-ið á iamgecontainer og loopa í gegnum og birta þetta í staðinn.
 };
+
+// Button active state
+const btns = document.querySelectorAll('button');
+let btnAct = document.createElement('div');
+
+const sortBtn = (click, active) => {
+  active.classList.toggle('active');
+  click.classList.toggle('active');
+  btnAct = click;
+}
+
+for ( let i = 0; i < btns.length; i++ ) {
+  const btn = btns[i];
+
+  btn.addEventListener('click', function() {
+    sortBtn(this, btnAct);
+  });
+}
+

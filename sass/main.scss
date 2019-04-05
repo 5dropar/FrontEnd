@@ -1,5 +1,5 @@
 $primary-color: #007bff;
-$hover-color: #006adb;
+$hover-color: #0161c7;
 $white: #fff;
 
 body {
@@ -66,14 +66,11 @@ header nav ul {
   display: flex;
   justify-content: center;
 }
-#btns {
+#filter-btns {
   width: 700px;
   display: flex;
   justify-content: space-between;
-  #highest,
-  #lowest,
-  #newest,
-  #oldest {
+  button {
     background-color: $primary-color;
     color: $white;
     height: 40px;
@@ -81,19 +78,19 @@ header nav ul {
     outline: none;
     border: none;
     border-radius: 5px;
-  }
-  #highest:hover,
-  #lowest:hover,
-  #newest:hover,
-  #oldest:hover {
-    background-color: $hover-color;
-    color: $white;
-    height: 40px;
-    width: 160px;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    transition: 0.3s;
+  
+    &:hover,
+    &:focus,
+    &.active {
+      background-color: $hover-color;
+      color: $white;
+      height: 40px;
+      width: 160px;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
   }
 }
 footer {

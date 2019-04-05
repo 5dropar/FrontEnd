@@ -62,15 +62,12 @@ header nav ul li {
   justify-content: center;
 }
 
-#btns {
+#filter-btns {
   width: 700px;
   display: flex;
   justify-content: space-between;
 }
-#btns #highest,
-#btns #lowest,
-#btns #newest,
-#btns #oldest {
+#filter-btns button {
   background-color: #007bff;
   color: #fff;
   height: 40px;
@@ -79,11 +76,8 @@ header nav ul li {
   border: none;
   border-radius: 5px;
 }
-#btns #highest:hover,
-#btns #lowest:hover,
-#btns #newest:hover,
-#btns #oldest:hover {
-  background-color: #006adb;
+#filter-btns button:hover, #filter-btns button:focus, #filter-btns button.active {
+  background-color: #0161c7;
   color: #fff;
   height: 40px;
   width: 160px;
@@ -206,7 +200,7 @@ footer a {
   }
 }
 #card #morebtn:hover {
-  background-color: #006adb;
+  background-color: #0161c7;
   color: #fff;
   height: 40px;
   width: 160px;
