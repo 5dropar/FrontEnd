@@ -48,28 +48,29 @@ displayImages = array => {
 //Build imge tekur inn eitt object í einu og returnar card-i með upplýsingum úr þeim object
 buildImage = image => {
   dateTime = () => {
-    function pad(value) { 
-      if (value < 10) { 
-        return '0' + value; 
-      } 
-      else 
-      { 
-          return value; 
+    function pad(value) {
+      if (value < 10) {
+        return "0" + value;
+      } else {
+        return value;
       }
     } //pad bætir 0 framan við mínútur, svo það verður td. 20:00 en ekki 20:0, fann á stack overflow
 
-    let time = new Date(image.date.seconds*1000);
+    let time = new Date(image.date.seconds * 1000);
     return `
       <div class="card-date">
         <p>Date:</p>
-        <p>${pad(time.getDate())}.${pad(time.getMonth()+1)} ${ time.getFullYear()}</p> 
+        <p>${pad(time.getDate())}.${pad(
+      time.getMonth() + 1
+    )} ${time.getFullYear()}</p> 
         <p>at</p>
-        <p>${pad(time.getHours())}:${pad(time.getMinutes())}:${pad(time.getSeconds())}</p>
+        <p>${pad(time.getHours())}:${pad(time.getMinutes())}:${pad(
+      time.getSeconds()
+    )}</p>
       </div>
-     `
+     `;
+  };
 
-  }
-  
   return `
         <div id="card">
             <img class="card-image" src="${image.imgUrl}">
@@ -79,8 +80,8 @@ buildImage = image => {
             <p>Rating: ${image.rating}</p>
             <p>${dateTime()}</p>
             <button onclick="getImage('${
-                  image.imageId
-                }')" class="enable-modal" id="morebtn" data-toggle="modal" data-target="#modal">Read more</i></button>
+              image.imageId
+            }')" class="enable-modal" id="morebtn" data-toggle="modal" data-target="#modal">Read more</i></button>
             </div>
         </div>
     `;
@@ -174,20 +175,19 @@ searchbar.onkeyup = () => {
 };
 
 // Button active state
-const btns = document.querySelectorAll('button');
-let btnAct = document.createElement('div');
+const btns = document.querySelectorAll("button");
+let btnAct = document.createElement("div");
 
 const sortBtn = (click, active) => {
-  active.classList.toggle('active');
-  click.classList.toggle('active');
+  active.classList.toggle("active");
+  click.classList.toggle("active");
   btnAct = click;
-}
+};
 
-for ( let i = 0; i < btns.length; i++ ) {
+for (let i = 0; i < btns.length; i++) {
   const btn = btns[i];
 
-  btn.addEventListener('click', function() {
+  btn.addEventListener("click", function() {
     sortBtn(this, btnAct);
   });
 }
-
