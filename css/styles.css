@@ -31,6 +31,14 @@ header nav .nav-link {
   padding-top: 0;
   padding-bottom: 0;
 }
+header nav a:hover {
+  text-decoration: none;
+  border: none;
+}
+header nav a:hover h4 {
+  text-decoration: none;
+  border: none;
+}
 header nav #search-container {
   border: 1px solid #007bff;
   background-color: #fff;

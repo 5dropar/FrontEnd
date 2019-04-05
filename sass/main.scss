@@ -33,7 +33,14 @@ header nav {
     padding-top: 0;
     padding-bottom: 0;
   }
-
+  a:hover{
+    text-decoration: none;
+    border: none;
+    h4{
+      text-decoration: none;
+      border: none;
+    }
+  }
   #search-container {
     border: 1px solid $primary-color;
     background-color: $white;
